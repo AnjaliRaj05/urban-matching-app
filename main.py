@@ -7,7 +7,7 @@ from schemas import UserCreate, UserUpdate, UserOut
 
 app = FastAPI()
 
-# Dependency to get the DB session
+
 def get_db():
     db = SessionLocal()
     try:
@@ -68,11 +68,10 @@ def find_matches(user_id: int, db: Session = Depends(get_db)):
     if db_user is None:
         raise HTTPException(status_code=404, detail="User not found")
 
-    # User's interests
     user_interests = db_user.interests
     print(f"User Interests: {user_interests}")
 
-    # Other users
+
     other_users = db.query(User).filter(User.id != user_id).all()
     print(f"Other Users: {other_users}")
 
