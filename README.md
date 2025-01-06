@@ -17,6 +17,9 @@ User Matching: An advanced feature that allows users to be matched with others b
 - The `age` field is assumed to be an integer. This field stores the user's age as a numerical value, making it easy to perform comparisons or calculations involving age.
 - he `city` field is assumed to be a string. It stores the name of the city where the user resides and is used for location-based matching with other users.
 
+  ![image](https://github.com/user-attachments/assets/ea941276-06db-4d99-812a-998d7534ff58)
+
+
 ## Project Structure
 
 - `main.py`: The main FastAPI application file containing route definitions.
